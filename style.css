@@ -1,0 +1,48 @@
+/* The game's paper look: cream paper with an ink edge, the hand font for headings, Nunito for reading. */
+:root {
+  --desk: #e7c48f;
+  --paper: #f8f2e3;
+  --ink: #15161f;
+  --muted: #5b5648;
+  --accent: #c8402f;
+  --line: #d9cdb2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --desk: #2a2420;
+    --paper: #f3ecdb;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--desk);
+  color: var(--ink);
+  font: 17px/1.6 "Nunito", system-ui, sans-serif;
+  padding: 32px 16px 64px;
+}
+.sheet {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-radius: 6px;
+  padding: 32px clamp(18px, 5vw, 48px) 40px;
+}
+h1, h2 { font-family: "Architects Daughter", cursive; font-weight: 400; line-height: 1.2; }
+h1 { font-size: clamp(32px, 7vw, 46px); margin: 0 0 8px; }
+h2 { font-size: 26px; margin: 28px 0 6px; }
+p { margin: 0 0 12px; }
+.lead { font-size: 19px; color: var(--muted); }
+.note { color: var(--muted); font-size: 15px; }
+.back { margin-bottom: 4px; font-size: 15px; }
+a { color: var(--accent); }
+.card {
+  margin: 24px 0;
+  padding: 18px 22px;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  background: #fffaf0;
+}
+.card h2 { margin-top: 0; }
+.links { display: flex; gap: 24px; flex-wrap: wrap; font-family: "Architects Daughter", cursive; font-size: 22px; }
